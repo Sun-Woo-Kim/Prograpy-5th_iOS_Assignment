@@ -40,7 +40,8 @@ playground.xcworkspace
 # Package.resolved
 .build/
 
-# CocoaPods
-
+# CocoaPods 
 Pods/
 
+# Secret
+Secret.swift
