@@ -55,7 +55,11 @@ extension MainViewController {
                 guard
                     let movieResponse = try? JSONDecoder().decode(MovieResponse.self, from: data),
                     let movieList = movieResponse.data?.movies
-                    else { return }
+                    else {
+                        
+                        print(String(data: data, encoding: .utf8)!)
+                        
+                        return }
                 
                 if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MovieListViewController") as? MovieListViewController {
                     viewController.movieList = movieList
